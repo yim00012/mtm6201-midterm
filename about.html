@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Icons stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google fonts links added before CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <title>Amuse Bites</title>
+</head>
+<body>
+    <ul class="skip-links">
+        <li><a href="#items">Skip to menu</a></li>
+        <li><a href="#main">Skip to main content</a></li>
+        <li><a href="#footer">Skip to order</a></li>
+    </ul>
+    <header class="wrapper header">
+        <!-- nav, logo, search menu -->
+        <div class="menu">
+            <nav role="navigation">
+                <input type="checkbox" id="bar">
+                <!-- <i class="fa fa-bars"></i> -->
+                <label for="bar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul id="items">
+                    <li><a href="#"><h1>Amuse Bites</h1></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="#">Cake pops</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+                </ul>
+            </nav>
+
+            <div class="logo">
+            <a href="index.html"><img src="images/logo1.png" alt="logo"></a>
+            </div>
+
+            <div class="search">
+            <a href="#"><i class="fa fa-search"></i></a>
+            </div>
+        </div>
+        
+        <!-- Main banner -->
+        <div class="banner" role="banner">
+            <img id="contact-banner" src="images/about-banner.jpg" alt="">
+            <!-- <h1>We are waiting for your comments!</h1> -->
+        </div>
+    </header>
+
+    <main class="wrapper" id="main" role="main">
+        <div class="about">
+            <h2 role="heading">About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae in at iure delectus voluptatem ad nobis amet dolorum quisquam nemo, labore, nihil a dolor facere tempora quia unde debitis magni.</p>
+            <div class="card">
+                <img src="images/baker.jpg" alt="bakers">
+                <ul itemscope itemtype="https://schema.org/Person">
+                    <li itemprop="name">Ben & Mary Brown</li>
+                    <li itemprop="jobTitle">Owner & Patissier</li>
+                    <li itemprop="email">happybakers@amusebites.ca</li>
+                </ul>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus corporis nihil odit esse at itaque dolorum quaerat dolor ut. Voluptatum quo voluptatibus id possimus assumenda eaque culpa numquam amet earum.</p>
+        </div>
+    </main>
+
+    <footer class="wrapper footer" id="footer" role="contentinfo">
+        <div class="buttons">
+            <a href="#" class="button order">Order</a>
+            <a href="contact.html" class="button contact">Contact</a>
+        </div>
+        <div class="copyright">&copy; Copyright for Amuse Bites. All rights reserved.</div>
+        <div class="social-media">
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-facebook-official"></i></a>
+        </div>
+        <div class="attribute">All images are taken from <a href="https://pixabay.com">pixabay</a></div>
+    </footer>
+</body>
+</html>

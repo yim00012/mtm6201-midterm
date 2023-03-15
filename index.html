@@ -16,23 +16,23 @@
 </head>
 <body>
     <ul class="skip-links">
-        <li><a href="#items">Skip to menu</a></li>
+        <li><a href="#menu-items">Skip to menu</a></li>
         <li><a href="#main">Skip to main content</a></li>
         <li><a href="#footer">Skip to order</a></li>
     </ul>
     <header class="wrapper header">
-        <!-- nav, logo, search menu -->
+        <!-- Header top elements -->
         <div class="menu">
             <nav role="navigation">
                 <input type="checkbox" id="bar">
-                <!-- <i class="fa fa-bars"></i> -->
                 <label for="bar">
+                    <!-- <i class="fa fa-bars"></i> -->
                     <span></span>
                     <span></span>
                     <span></span>
                 </label>
-                <ul id="items">
-                    <li><a href="#"><h1>Amuse Bites</h1></a></li>
+                <ul id="menu-items">
+                    <li><h4>Amuse Bites</h4></li>
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="#">Cake pops</a></li>
@@ -42,18 +42,35 @@
                 </ul>
             </nav>
 
+            <!-- Main logo stays center top as a link to homepage -->
             <div class="logo">
-            <a href="index.html"><img src="images/logo1.png" alt="logo"></a>
+                <a href="index.html"><img src="images/logo1.png" alt="logo"></a>
             </div>
 
+            <!-- Search bar -->
             <div class="search">
-            <a href="#"><i class="fa fa-search"></i></a>
+                <input type="checkbox" id="search">
+                <label for="search">
+                    <i class="fa fa-search"></i>
+                </label>
+                <div id="search-bar">
+                    <input type="text" id="text-bar" name="search" placeholder="Search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
             </div>
         </div>
         
-        <!-- Main banner -->
-        <div class="banner" role="banner">
-            <img src="images/main-banner.jpg" alt="main-banner">
+        <!-- Main banner and heading 1 -->
+        <div class="banner main-banner" role="banner">
+            <img
+                srcset="images/main-banner-480.png 480w,
+                images/main-banner-960.png 960w,
+                images/main-banner-1280.png 1280w"
+                sizes="(max-width: 480px) 480px,
+                (max-width: 960px) 960px,
+                (max-width: 1280px) 1280px"
+                src="images/main-banner.jpg"
+                alt="main-banner">
             <h1 role="heading">Amuse Bites for your memorable events!</h1>
         </div>
     </header>
@@ -61,12 +78,32 @@
     <main class="wrapper" id="main" role="main">
         <!-- Content with flexbox -->
         <div class="article">
-            <div class="pic-1"><img src="images/cake-pops-kids.jpg" alt="cake-pops-kids"></div>
+            <div class="pic-1">
+                <a href="#">
+                    <img
+                    srcset="images/cake-pops-kids-240.png 240w,
+                    images/cake-pops-kids-480.png 480w,
+                    images/cake-pops-kids-640.png 640w"
+                    sizes="(max-width: 240px) 240px,
+                    (max-width: 480px) 480px,
+                    (max-width: 640px) 640px"
+                    src="images/cake-pops-kids.jpg" alt="cake-pops-kids"></a>
+            </div>
             <div class="container-1">
                 <h3>Heading</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam voluptates iste perspiciatis non fuga enim perferendis sed deleniti distinctio quos minima est iure nulla, harum modi libero. Quo, veritatis reprehenderit?</p>
             </div>
-            <div class="pic-2"><img src="images/cake-pops-red.jpg" alt="cake-pops-red"></div>
+            <div class="pic-2">
+                <a href="#">
+                    <img
+                    srcset="images/cake-pops-red-240.png 240w,
+                    images/cake-pops-red-480.png 480w,
+                    images/cake-pops-red-640.png 640w"
+                    sizes="(max-width: 240px) 240px,
+                    (max-width: 480px) 480px,
+                    (max-width: 640px) 640px"
+                    src="images/cake-pops-red.jpg" alt="cake-pops-red"></a>
+            </div>
             <div class="container-2">
                 <h3>Heading</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam voluptates iste perspiciatis non fuga enim perferendis sed deleniti distinctio quos minima est iure nulla, harum modi libero. Quo, veritatis reprehenderit?</p>
@@ -74,10 +111,11 @@
         </div>
     </main>
 
+    <!-- Footer elements with buttons, copyright, and social media links -->
     <footer class="wrapper footer" id="footer" role="contentinfo">
         <div class="buttons">
-            <a href="#" class="button order">Order</a>
-            <a href="contact.html" class="button contact">Contact</a>
+            <a href="#" class="button button-order">Order</a>
+            <a href="contact.html" class="button button-contact">Contact</a>
         </div>
         <div class="copyright">&copy; Copyright for Amuse Bites. All rights reserved.</div>
         <div class="social-media">

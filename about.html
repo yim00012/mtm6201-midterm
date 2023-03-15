@@ -16,23 +16,23 @@
 </head>
 <body>
     <ul class="skip-links">
-        <li><a href="#items">Skip to menu</a></li>
+        <li><a href="#menu-items">Skip to menu</a></li>
         <li><a href="#main">Skip to main content</a></li>
         <li><a href="#footer">Skip to order</a></li>
     </ul>
     <header class="wrapper header">
-        <!-- nav, logo, search menu -->
+        <!-- Header top elements -->
         <div class="menu">
             <nav role="navigation">
                 <input type="checkbox" id="bar">
-                <!-- <i class="fa fa-bars"></i> -->
                 <label for="bar">
+                    <!-- <i class="fa fa-bars"></i> -->
                     <span></span>
                     <span></span>
                     <span></span>
                 </label>
-                <ul id="items">
-                    <li><a href="#"><h1>Amuse Bites</h1></a></li>
+                <ul id="menu-items">
+                    <li><h1>Amuse Bites</h1></li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" class="active">About</a></li>
                     <li><a href="#">Cake pops</a></li>
@@ -42,42 +42,71 @@
                 </ul>
             </nav>
 
+            <!-- Main logo stays center top as a link to homepage -->
             <div class="logo">
             <a href="index.html"><img src="images/logo1.png" alt="logo"></a>
             </div>
 
+            <!-- Search bar -->
             <div class="search">
-            <a href="#"><i class="fa fa-search"></i></a>
+                <input type="checkbox" id="search">
+                <label for="search">
+                    <i class="fa fa-search"></i>
+                </label>
+                <div id="search-bar">
+                    <input type="text" id="text-bar" name="search" placeholder="Search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
             </div>
         </div>
         
-        <!-- Main banner -->
-        <div class="banner" role="banner">
-            <img id="contact-banner" src="images/about-banner.jpg" alt="">
+        
+        <!-- Banner image -->
+        <div class="banner content-banner about-banner" role="banner">
+            <img
+                srcset="images/about-banner-480.png 480w,
+                images/about-banner-960.png 960w,
+                images/about-banner-1280.png 1280w"
+                sizes="(max-width: 480px) 480px,
+                (max-width: 960px) 960px,
+                (max-width: 1280px) 1280px"
+                src="images/about-banner.jpg" alt="about-banner">
             <!-- <h1>We are waiting for your comments!</h1> -->
         </div>
     </header>
 
     <main class="wrapper" id="main" role="main">
+        <!-- Main content -->
+        <h2 role="heading">About Us</h2>
         <div class="about">
-            <h2 role="heading">About Us</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae in at iure delectus voluptatem ad nobis amet dolorum quisquam nemo, labore, nihil a dolor facere tempora quia unde debitis magni.</p>
+            <!-- Personal info with schema information-->
             <div class="card">
-                <img src="images/baker.jpg" alt="bakers">
+                <img
+                    srcset="images/baker-320.png 320w,
+                    images/baker-640.png 640w,
+                    images/baker-1024.png 10240w"
+                    sizes="(max-width: 320px) 320px,
+                    (max-width: 640px) 640px,
+                    (max-width: 1024px) 1024px"
+                    src="images/baker.jpg" alt="bakers">
                 <ul itemscope itemtype="https://schema.org/Person">
                     <li itemprop="name">Ben & Mary Brown</li>
                     <li itemprop="jobTitle">Owner & Patissier</li>
                     <li itemprop="email">happybakers@amusebites.ca</li>
                 </ul>
             </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus corporis nihil odit esse at itaque dolorum quaerat dolor ut. Voluptatum quo voluptatibus id possimus assumenda eaque culpa numquam amet earum.</p>
+            <div class="about-p">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae in at iure delectus voluptatem ad nobis amet dolorum quisquam nemo, labore, nihil a dolor facere tempora quia unde debitis magni. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus corporis nihil odit esse at itaque dolorum quaerat dolor ut. Voluptatum quo voluptatibus id possimus assumenda eaque culpa numquam amet earum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae in at iure delectus voluptatem ad nobis amet dolorum quisquam nemo, labore, nihil a dolor facere tempora quia unde debitis magni. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus corporis nihil odit esse at itaque dolorum quaerat dolor ut. Voluptatum quo voluptatibus id possimus assumenda eaque culpa numquam amet earum.</p>
+            </div>
         </div>
     </main>
 
+    <!-- Footer elements with buttons, copyright, and social media links -->
     <footer class="wrapper footer" id="footer" role="contentinfo">
         <div class="buttons">
-            <a href="#" class="button order">Order</a>
-            <a href="contact.html" class="button contact">Contact</a>
+            <a href="#" class="button-order">Order</a>
+            <a href="contact.html" class="button-contact">Contact</a>
         </div>
         <div class="copyright">&copy; Copyright for Amuse Bites. All rights reserved.</div>
         <div class="social-media">

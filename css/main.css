@@ -658,11 +658,7 @@ form input:focus, form textarea:focus {
         max-width: 70%;
     }
 
-    /* Footer elements in different colour and order */
-    footer {
-        /* background-color: #f6be9a; */
-    }
-
+    /* Footer elements in different order */
     .buttons {
         flex-basis: 40%;
         text-align: end;

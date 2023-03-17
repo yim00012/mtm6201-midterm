@@ -141,6 +141,12 @@ russian violet #23022e */
     top: 0;
 }
 
+input[id=bar]:focus + label[for=bar],
+input[id=search]:focus + label[for=search] {
+    outline: 2px dashed #4c230a;
+    transition: none;
+}
+
 
 /* Set for header top */
 .menu {
@@ -152,6 +158,8 @@ russian violet #23022e */
     margin: auto;
     width: 100%;
     position: relative;
+    margin: 10px 0;
+    height: max-content;
 }
 
 /* Hidden nav menu properties */
@@ -169,7 +177,6 @@ russian violet #23022e */
 
 nav ul li {
     font-size: 1.5rem;
-    /* padding: 10px; */
 }
 
 #menu-items a {
@@ -191,7 +198,7 @@ nav ul li {
    transition: .3s;
 }
 
-nav:hover > label[for=bar] > span {
+label[for=bar]:hover > span {
     background-color: #df2935;
     transition: 0.1s;
 }
@@ -218,8 +225,8 @@ label[for=bar] {
     width: 50px;
     height: 50px;
     display: block;
-    position: absolute;
-    top: 20px;
+    position: relative;
+    left: 10px;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -233,9 +240,9 @@ input[id=bar]:checked ~ #menu-items {
 label[for=bar] span {
     background-color: black;
     display: block;
-    width: 21px;
+    width: 50%;
     height: 3.5px;
-    margin: 3px 20px;
+    margin: 3px 15px;
     border-radius: 2px;
     position: absolute;
     z-index: 10;
@@ -243,20 +250,20 @@ label[for=bar] span {
 }
 
 label[for=bar] span:nth-child(1) {
-    top: 0;
+    top: 25%;
 }
 
 label[for=bar] span:nth-child(2) {
-    top: 15%;
+    top: 40%;
 }
 
 label[for=bar] span:nth-child(3) {
-    top: 30%;
+    top: 55%;
 }
 
   /* Sliding animation to X-shape */
 input[id=bar]:checked + label span:nth-child(1) {
-    top: 15%;
+    top: 40%;
     transform: rotate(45deg);
 }
 
@@ -265,16 +272,28 @@ input[id=bar]:checked + label span:nth-child(2) {
 }
 
 input[id=bar]:checked + label span:nth-child(3) {
-    top: 15%;
+    top: 40%;
     transform: rotate(-45deg);
+}
+
+/* Main logo to be centered */
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Header top logo size */
 .logo img {
-    width: 50%;
+    width: 90%;
 }
 
 /* Hidden search bar properties */
+.search {
+    
+}
+
 #search-bar {
     width: 300px;
     position: fixed;
@@ -296,13 +315,17 @@ input[id=bar]:checked + label span:nth-child(3) {
     padding: 10px;
 }
 
+#search-bar input:focus {
+    outline: 2px dashed #f6be9a;
+}
+
 #search-bar button {
     background-color: #4c230a;
-    /* border: 1px solid #c78c06; */
     height: 50px;
     width: 50px;
     float: right;
     border: none;
+    padding: 0;
 }
 
 button .fa-search {
@@ -313,8 +336,8 @@ button .fa-search {
 input[id=search] {
     /* display: none; */
     opacity: 0;
-    right: 0px;
-    top: 5px;
+    right: 10px;
+    top: 0;
     display: block;
     position: absolute;
     width: 50px;
@@ -322,14 +345,13 @@ input[id=search] {
     cursor: pointer;
 }
 
-
 label[for=search] {
-    /* width: 50px;
-    height: 50px; */
+    width: 50px;
+    height: 50px;
     display: block;
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 0;
     cursor: pointer;
     transition: 0.3s;
     z-index: 1;
@@ -421,6 +443,7 @@ input[id=search]:checked ~ #search-bar {
 
 .buttons {
     flex-basis: 100%;
+    align-self: center;
 }
 
 .button {
@@ -429,8 +452,7 @@ input[id=search]:checked ~ #search-bar {
     font-size: 1.2em;
     padding: .5em 1.5em;
     display: inline-block;
-    margin: 10px;
-    margin-bottom: 0;
+    margin: 0 10px;
 }
 
 .button:hover {
@@ -544,8 +566,7 @@ form div {
 }
 
 form input:focus, form textarea:focus {
-    outline: #f6be9a;
-    outline-style: dashed;
+    outline: 2px dashed #f6be9a;
 }
 
 /* Send button properties */
@@ -581,8 +602,8 @@ form input:focus, form textarea:focus {
         height: max-content;
     }
 
-    label[for=bar] {
-        top: 10px;
+    label[for=bar] span {
+        width: 50%;
     }
 
     /* Put search bar on the top-right corner */
@@ -605,13 +626,6 @@ form input:focus, form textarea:focus {
     }
 
     /* Main logo to be centered */
-    .logo {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
     .logo img {
         width: 70%;
     }

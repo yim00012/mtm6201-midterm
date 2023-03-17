@@ -164,6 +164,7 @@ russian violet #23022e */
     transition: 0.5s;
     padding-top: 100px;
     background: #f6be9a;
+    z-index: 5;
 }
 
 nav ul li {
@@ -187,6 +188,7 @@ nav ul li {
 
 .fa:hover {
    color: #df2935;
+   transition: .3s;
 }
 
 nav:hover > label[for=bar] > span {
@@ -236,7 +238,7 @@ label[for=bar] span {
     margin: 3px 20px;
     border-radius: 2px;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     transition: 0.5s;
 }
 
@@ -386,6 +388,7 @@ input[id=search]:checked ~ #search-bar {
 
 .pic-1 {
     flex-basis: 50%;
+    position: relative;
 }
 
 .container-1 {
@@ -396,6 +399,7 @@ input[id=search]:checked ~ #search-bar {
 .pic-2 {
     order: 1;
     flex-basis: 50%;
+    position: relative;
 }
 
 .container-2 {
@@ -419,7 +423,7 @@ input[id=search]:checked ~ #search-bar {
     flex-basis: 100%;
 }
 
-.buttons a {
+.button {
     background-color: #4a306d;
     color: #f4f4d3;
     font-size: 1.2em;
@@ -429,7 +433,7 @@ input[id=search]:checked ~ #search-bar {
     margin-bottom: 0;
 }
 
-.buttons a:hover {
+.button:hover {
     opacity: .7;
 }
 
@@ -675,4 +679,46 @@ form input:focus, form textarea:focus {
     }
  }
 
- 
+ /* Animations */
+ @keyframes down{
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.banner h1 {
+    animation: down 1.5s;
+}
+
+.pic-link {
+    background-color: #23022e;
+    color: #f4f4d3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .3s;
+}
+
+.pic-link:hover {
+    opacity: .7;
+}
+
+.pic-text {
+    color: #f4f4d3;
+    font-size: 1.5em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
